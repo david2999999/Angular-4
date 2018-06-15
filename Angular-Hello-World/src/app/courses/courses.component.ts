@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent implements OnInit {
-
+  title = 'List of Courses';
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getTitle() {
+    return this.title;
   }
 
 }
