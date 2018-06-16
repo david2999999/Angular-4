@@ -9,6 +9,7 @@ import { NgForComponent } from './ng-for/ng-for.component';
 import {FormsModule} from '@angular/forms';
 import { NgClassComponent } from './ng-class/ng-class.component';
 import { NgStyleComponent } from './ng-style/ng-style.component';
+import { SafeTraversalComponent } from './safe-traversal/safe-traversal.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NgStyleComponent } from './ng-style/ng-style.component';
     NgSwitchCaseComponent,
     NgForComponent,
     NgClassComponent,
-    NgStyleComponent
+    NgStyleComponent,
+    SafeTraversalComponent
   ],
   imports: [
     BrowserModule,
