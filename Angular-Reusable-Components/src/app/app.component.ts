@@ -15,4 +15,11 @@ export class AppComponent {
   onFavoriteChanged(eventArgs: FavoriteChangedEventArgs) {
     console.log('Favorite Changed', eventArgs.newValue);
   }
+
+  // used for the exercise
+  tweet = {
+    body: '...',
+    likesCount: 10,
+    isLiked: true
+  }
 }

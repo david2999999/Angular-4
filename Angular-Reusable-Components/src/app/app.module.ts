@@ -6,13 +6,15 @@ import {FormsModule} from '@angular/forms';
 import { ComponentApiComponent } from './component-api/component-api.component';
 import { NgContentComponent } from './ng-content/ng-content.component';
 import { NgContainerComponent } from './ng-container/ng-container.component';
+import { ExerciseComponent } from './exercise/exercise.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ComponentApiComponent,
     NgContentComponent,
-    NgContainerComponent
+    NgContainerComponent,
+    ExerciseComponent
   ],
   imports: [
     BrowserModule,
