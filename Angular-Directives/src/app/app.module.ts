@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { HiddenComponent } from './hidden/hidden.component';
+import { NgSwitchCaseComponent } from './ng-switch-case/ng-switch-case.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgIfComponent,
-    HiddenComponent
+    HiddenComponent,
+    NgSwitchCaseComponent
   ],
   imports: [
     BrowserModule
