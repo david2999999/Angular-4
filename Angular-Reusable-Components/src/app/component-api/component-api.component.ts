@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-component-api',
@@ -7,6 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ComponentApiComponent implements OnInit {
   @Input('is-favorite') isFavorite: boolean;
+  @Output() change = new EventEmitter();
 
   constructor() { }
 
@@ -15,6 +16,7 @@ export class ComponentApiComponent implements OnInit {
 
   onClick() {
     this.isFavorite = !this.isFavorite;
+    this.change.emit();
   }
 
 }

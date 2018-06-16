@@ -1,2 +1,3 @@
-<app-component-api [is-favorite]="post.isFavorite">
+<app-component-api [is-favorite]="post.isFavorite"
+                    (change)="onFavoriteChanged()">
 </app-component-api>
