@@ -4,8 +4,10 @@
   <!--</li>-->
 <!--</ul>-->
 
+<button (click)="onAdd()" class="btn btn-primary">Add Course</button>
 <ul>
   <li *ngFor="let course of courses; even as isEven">
     {{ course.name }} <span *ngIf="isEven">(Even)</span>
+    <button class="btn btn-danger" (click)="onRemove(course)">Remove</button>
   </li>
 </ul>
