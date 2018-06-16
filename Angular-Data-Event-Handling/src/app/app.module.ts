@@ -8,6 +8,7 @@ import { BootstrapComponent } from './bootstrap/bootstrap.component';
 import { ClassBindingComponent } from './class-binding/class-binding.component';
 import { StyleBindingComponent } from './style-binding/style-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
+import { EventFilteringComponent } from './event-filtering/event-filtering.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
     BootstrapComponent,
     ClassBindingComponent,
     StyleBindingComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    EventFilteringComponent
   ],
   imports: [
     BrowserModule
