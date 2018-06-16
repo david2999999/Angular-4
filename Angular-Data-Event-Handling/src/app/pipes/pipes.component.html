@@ -1,0 +1,8 @@
+<h3>{{ course.title | uppercase | lowercase}}</h3>
+<h3>{{ course.student | number}}</h3>
+<!-- first number is how many integer number -->
+<!-- second number means whats the min number of decimal places to the max number of decimal places -->
+<h3>{{ course.rating | number:'1.2-2' }}</h3>
+<h3>{{ course.price | currency: 'AUD': true: '3.2-2'}}</h3>
+<h3>{{ course.releaseDate | date:'shortDate' }}</h3>
+

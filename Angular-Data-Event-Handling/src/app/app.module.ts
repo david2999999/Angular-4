@@ -12,6 +12,7 @@ import { EventFilteringComponent } from './event-filtering/event-filtering.compo
 import { TemplateVarComponent } from './template-var/template-var.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import {FormsModule} from '@angular/forms';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {FormsModule} from '@angular/forms';
     EventBindingComponent,
     EventFilteringComponent,
     TemplateVarComponent,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
