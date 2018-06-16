@@ -9,6 +9,7 @@ import { ClassBindingComponent } from './class-binding/class-binding.component';
 import { StyleBindingComponent } from './style-binding/style-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { EventFilteringComponent } from './event-filtering/event-filtering.component';
+import { TemplateVarComponent } from './template-var/template-var.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EventFilteringComponent } from './event-filtering/event-filtering.compo
     ClassBindingComponent,
     StyleBindingComponent,
     EventBindingComponent,
-    EventFilteringComponent
+    EventFilteringComponent,
+    TemplateVarComponent
   ],
   imports: [
     BrowserModule
