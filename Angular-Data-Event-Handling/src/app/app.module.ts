@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from './data-binding/courses.component';
 import { AttrBindingComponent } from './attr-binding/attr-binding.component';
 import { BootstrapComponent } from './bootstrap/bootstrap.component';
+import { ClassBindingComponent } from './class-binding/class-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
     AttrBindingComponent,
-    BootstrapComponent
+    BootstrapComponent,
+    ClassBindingComponent
   ],
   imports: [
     BrowserModule
