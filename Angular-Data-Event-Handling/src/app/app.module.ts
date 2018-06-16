@@ -13,6 +13,8 @@ import { TemplateVarComponent } from './template-var/template-var.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import {FormsModule} from '@angular/forms';
 import { PipesComponent } from './pipes/pipes.component';
+import { CustomPipeComponent } from './custom-pipe/custom-pipe.component';
+import {SummaryPipe} from './custom-pipe/summary.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { PipesComponent } from './pipes/pipes.component';
     EventFilteringComponent,
     TemplateVarComponent,
     TwoWayBindingComponent,
-    PipesComponent
+    PipesComponent,
+    CustomPipeComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@ export class PipesComponent implements OnInit {
     rating: 4.9745,
     student: 12123,
     price: 190.92,
-    releaseDate: new Date(2016, 3, 1);
+    releaseDate: new Date(2016, 3, 1)
   }
 
   constructor() { }
