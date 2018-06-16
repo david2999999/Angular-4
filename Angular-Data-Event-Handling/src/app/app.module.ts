@@ -16,6 +16,8 @@ import { PipesComponent } from './pipes/pipes.component';
 import { CustomPipeComponent } from './custom-pipe/custom-pipe.component';
 import {SummaryPipe} from './custom-pipe/summary.pipe';
 import { ExerciseComponent } from './exercise/exercise.component';
+import { ExerciseTwoComponent } from './exercise-two/exercise-two.component';
+import { TitleCasePipe } from './exercise-two/title-case.pipe';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ExerciseComponent } from './exercise/exercise.component';
     PipesComponent,
     CustomPipeComponent,
     SummaryPipe,
-    ExerciseComponent
+    ExerciseComponent,
+    ExerciseTwoComponent,
+    TitleCasePipe
   ],
   imports: [
     BrowserModule,
