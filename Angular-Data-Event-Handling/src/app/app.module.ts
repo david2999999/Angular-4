@@ -15,6 +15,7 @@ import {FormsModule} from '@angular/forms';
 import { PipesComponent } from './pipes/pipes.component';
 import { CustomPipeComponent } from './custom-pipe/custom-pipe.component';
 import {SummaryPipe} from './custom-pipe/summary.pipe';
+import { ExerciseComponent } from './exercise/exercise.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {SummaryPipe} from './custom-pipe/summary.pipe';
     TwoWayBindingComponent,
     PipesComponent,
     CustomPipeComponent,
-    SummaryPipe
+    SummaryPipe,
+    ExerciseComponent
   ],
   imports: [
     BrowserModule,
