@@ -10,6 +10,8 @@ import { StyleBindingComponent } from './style-binding/style-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { EventFilteringComponent } from './event-filtering/event-filtering.component';
 import { TemplateVarComponent } from './template-var/template-var.component';
+import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,10 +23,12 @@ import { TemplateVarComponent } from './template-var/template-var.component';
     StyleBindingComponent,
     EventBindingComponent,
     EventFilteringComponent,
-    TemplateVarComponent
+    TemplateVarComponent,
+    TwoWayBindingComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
