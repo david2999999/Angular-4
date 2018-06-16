@@ -6,6 +6,7 @@ import { CoursesComponent } from './data-binding/courses.component';
 import { AttrBindingComponent } from './attr-binding/attr-binding.component';
 import { BootstrapComponent } from './bootstrap/bootstrap.component';
 import { ClassBindingComponent } from './class-binding/class-binding.component';
+import { StyleBindingComponent } from './style-binding/style-binding.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ClassBindingComponent } from './class-binding/class-binding.component';
     CoursesComponent,
     AttrBindingComponent,
     BootstrapComponent,
-    ClassBindingComponent
+    ClassBindingComponent,
+    StyleBindingComponent
   ],
   imports: [
     BrowserModule
