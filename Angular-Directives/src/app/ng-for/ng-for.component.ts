@@ -6,11 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ng-for.component.css']
 })
 export class NgForComponent implements OnInit {
-  courses = [
-    { id: 1, name: 'Course 1'},
-    { id: 2, name: 'Course 2'},
-    { id: 3, name: 'Course 3'}
-    ];
+  courses = [];
 
   constructor() { }
 
@@ -26,5 +22,17 @@ export class NgForComponent implements OnInit {
   onRemove(course) {
     const index = this.courses.indexOf(course);
     this.courses.splice(index, 1);
+  }
+
+  loadCourses() {
+    this.courses = [
+      { id: 1, name: 'Course 1'},
+      { id: 2, name: 'Course 2'},
+      { id: 3, name: 'Course 3'}
+    ];
+  }
+
+  trackCourse(index, course) {
+    return course ? course.id : undefined;
   }
 }
