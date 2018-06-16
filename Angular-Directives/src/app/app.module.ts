@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NgIfComponent } from './ng-if/ng-if.component';
+import { HiddenComponent } from './hidden/hidden.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NgIfComponent
+    NgIfComponent,
+    HiddenComponent
   ],
   imports: [
     BrowserModule
