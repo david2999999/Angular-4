@@ -7,6 +7,7 @@ import { AttrBindingComponent } from './attr-binding/attr-binding.component';
 import { BootstrapComponent } from './bootstrap/bootstrap.component';
 import { ClassBindingComponent } from './class-binding/class-binding.component';
 import { StyleBindingComponent } from './style-binding/style-binding.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { StyleBindingComponent } from './style-binding/style-binding.component';
     AttrBindingComponent,
     BootstrapComponent,
     ClassBindingComponent,
-    StyleBindingComponent
+    StyleBindingComponent,
+    EventBindingComponent
   ],
   imports: [
     BrowserModule
