@@ -6,7 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./component-api.component.css']
 })
 export class ComponentApiComponent implements OnInit {
-  @Input() isFavorite: boolean;
+  @Input('is-favorite') isFavorite: boolean;
 
   constructor() { }
 
