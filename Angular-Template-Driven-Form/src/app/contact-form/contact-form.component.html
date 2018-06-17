@@ -24,5 +24,8 @@
     <textarea id="comment" cols="30" rows="10" class="form-control"
               ngModel name="comment"></textarea>
   </div>
-  <button class="btn btn-primary" type="submit">Submit</button>
+  <button [disabled]="!f.valid"
+      class="btn btn-primary" type="submit">
+    Submit
+  </button>
 </form>
