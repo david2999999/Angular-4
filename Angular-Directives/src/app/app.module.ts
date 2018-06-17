@@ -12,6 +12,7 @@ import { NgStyleComponent } from './ng-style/ng-style.component';
 import { SafeTraversalComponent } from './safe-traversal/safe-traversal.component';
 import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
 import { InputFormatDirective } from './custom-directive/input-format.directive';
+import { ExerciseZippyComponent } from './exercise-zippy/exercise-zippy.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { InputFormatDirective } from './custom-directive/input-format.directive'
     NgStyleComponent,
     SafeTraversalComponent,
     CustomDirectiveComponent,
-    InputFormatDirective
+    InputFormatDirective,
+    ExerciseZippyComponent
   ],
   imports: [
     BrowserModule,
