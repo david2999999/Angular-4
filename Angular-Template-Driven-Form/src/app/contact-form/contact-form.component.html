@@ -24,6 +24,17 @@
     <textarea id="comment" cols="30" rows="10" class="form-control"
               ngModel name="comment"></textarea>
   </div>
+
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" ngModel name="isSubscribed"> Subscribe to Mailing
+    </label>
+  </div>
+  <p>
+    {{ f.value | json }}
+  </p>
+
   <button [disabled]="!f.valid"
       class="btn btn-primary" type="submit">
     Submit
