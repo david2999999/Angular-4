@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import {FormsModule} from '@angular/forms';
+import { FormExerciseComponent } from './form-exercise/form-exercise.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    FormExerciseComponent
   ],
   imports: [
     BrowserModule,
