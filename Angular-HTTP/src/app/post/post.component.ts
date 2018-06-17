@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {Http} from '@angular/http';
 
 @Component({
@@ -6,17 +6,27 @@ import {Http} from '@angular/http';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
-export class PostComponent implements OnInit {
+export class PostComponent{
   posts: any[];
+  private url = 'https://jsonplaceholder.typicode.com/posts';
 
-  constructor(http: Http) {
-    http.get('https://jsonplaceholder.typicode.com/posts')
+  constructor(private http: Http) {
+    http.get(this.url)
       .subscribe(response => {
         this.posts = response.json();
       });
   }
 
-  ngOnInit() {
-  }
+  createPost(input: HTMLInputElement) {
+    const post: any = {
+      title: input.value
+    };
+    input.value = '';
 
+    this.http.post(this.url, JSON.stringify(post))
+      .subscribe(response => {
+        post['id'] = response.json().id;
+        this.posts.splice(0, 0 , post);
+      });
+  }
 }
