@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {SignupFormComponent} from './signup-form/signup-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormArrayComponent } from './form-array/form-array.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupFormComponent
+    SignupFormComponent,
+    FormArrayComponent
   ],
   imports: [
     BrowserModule,
