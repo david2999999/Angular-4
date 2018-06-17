@@ -7,7 +7,10 @@
         <div class="alert alert-danger" *ngIf="username.touched && username.invalid">
           <div *ngIf="username['errors'].required">Username is Required</div>
           <div *ngIf="username['errors'].minlength">
-            Username should be a minimum of {{ username['errors'].minlength['requiredLength'] }} characters
+          Username should be a minimum of {{ username['errors'].minlength['requiredLength'] }} characters
+        </div>
+          <div *ngIf="username['errors'].cannotContainSpace">
+            Username cannot contain space
           </div>
         </div>
     </div>
