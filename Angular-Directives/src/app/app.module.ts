@@ -10,6 +10,8 @@ import {FormsModule} from '@angular/forms';
 import { NgClassComponent } from './ng-class/ng-class.component';
 import { NgStyleComponent } from './ng-style/ng-style.component';
 import { SafeTraversalComponent } from './safe-traversal/safe-traversal.component';
+import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
+import { InputFormatDirective } from './custom-directive/input-format.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SafeTraversalComponent } from './safe-traversal/safe-traversal.componen
     NgForComponent,
     NgClassComponent,
     NgStyleComponent,
-    SafeTraversalComponent
+    SafeTraversalComponent,
+    CustomDirectiveComponent,
+    InputFormatDirective
   ],
   imports: [
     BrowserModule,
