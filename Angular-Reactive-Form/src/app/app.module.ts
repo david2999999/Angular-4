@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import {SignupFormComponent} from './signup-form/signup-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FormArrayComponent } from './form-array/form-array.component';
+import { ExerciseReactiveComponent } from './exercise-reactive/exercise-reactive.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupFormComponent,
-    FormArrayComponent
+    FormArrayComponent,
+    ExerciseReactiveComponent
   ],
   imports: [
     BrowserModule,
