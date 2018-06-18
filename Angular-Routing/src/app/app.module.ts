@@ -1,49 +1,44 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {ErrorHandler, NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import {HttpModule} from '@angular/http';
-import {FormsModule} from '@angular/forms';
-import {PostService} from './services/post.service';
-import {GithubService} from './services/github.service';
-import { NavbarComponent } from './navbar/navbar.component';
-import { GithubFollowerComponent } from './github-follower/github-follower.component';
-import {AppErrorHandler} from './common/app-error-handler';
-import {HomeComponent} from './home/home.component';
-import {NotFoundComponent} from './not-found/not-found.component';
-import {GithubProfileComponent} from './github-profile/github-profile.component';
-import {RouterModule} from '@angular/router';
-import {PostsComponent} from './posts/posts.component';
-import {P} from '@angular/core/src/render3';
+import { HomeComponent } from './home/home.component';
+import { UsersComponent } from './users/users.component';
+import { ServersComponent } from './servers/servers.component';
+import { UserComponent } from './users/user/user.component';
+import { EditServerComponent } from './servers/edit-server/edit-server.component';
+import { ServerComponent } from './servers/server/server.component';
+import { ServersService } from './servers/servers.service';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AuthService} from './auth.service';
+import {AuthGuardService} from './auth-guard.service';
+import {CanDeactivateGuardService} from './servers/edit-server/can-deactivate-guard.service';
+import { ErrorPageComponent } from './error-page/error-page.component';
+import {ServerResolver} from './servers/server/server-resolver.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    GithubFollowerComponent,
     HomeComponent,
-    NotFoundComponent,
-    GithubProfileComponent,
-    PostsComponent
+    UsersComponent,
+    ServersComponent,
+    UserComponent,
+    EditServerComponent,
+    ServerComponent,
+    PageNotFoundComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule,
     FormsModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent },
-      { path: 'followers/:id/:username', component: GithubProfileComponent },
-      { path: 'followers', component: GithubFollowerComponent },
-      { path: 'posts', component: PostsComponent},
-      { path: '**', component: NotFoundComponent}
-    ])
+    HttpModule,
+    AppRoutingModule
   ],
-  providers:
-    [
-      PostService,
-    { provide: ErrorHandler, useClass: AppErrorHandler},
-    GithubService
-    ],
+  providers: [ServersService, AuthService, AuthGuardService, CanDeactivateGuardService, ServerResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
