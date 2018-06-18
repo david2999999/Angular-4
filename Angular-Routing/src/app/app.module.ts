@@ -13,6 +13,8 @@ import {HomeComponent} from './home/home.component';
 import {NotFoundComponent} from './not-found/not-found.component';
 import {GithubProfileComponent} from './github-profile/github-profile.component';
 import {RouterModule} from '@angular/router';
+import {PostsComponent} from './posts/posts.component';
+import {P} from '@angular/core/src/render3';
 
 @NgModule({
   declarations: [
@@ -21,13 +23,20 @@ import {RouterModule} from '@angular/router';
     GithubFollowerComponent,
     HomeComponent,
     NotFoundComponent,
-    GithubProfileComponent
+    GithubProfileComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
-    RouterModule
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent },
+      { path: 'followers/:username', component: GithubProfileComponent },
+      { path: 'followers', component: GithubFollowerComponent },
+      { path: 'posts', component: PostsComponent},
+      { path: '**', component: NotFoundComponent}
+    ])
   ],
   providers:
     [
