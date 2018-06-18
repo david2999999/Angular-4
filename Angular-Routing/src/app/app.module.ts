@@ -32,7 +32,7 @@ import {P} from '@angular/core/src/render3';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'followers/:username', component: GithubProfileComponent },
+      { path: 'followers/:id', component: GithubProfileComponent },
       { path: 'followers', component: GithubFollowerComponent },
       { path: 'posts', component: PostsComponent},
       { path: '**', component: NotFoundComponent}
