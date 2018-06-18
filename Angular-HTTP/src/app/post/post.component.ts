@@ -15,6 +15,9 @@ export class PostComponent implements OnInit{
       this.postService.getPost()
         .subscribe(response => {
           this.posts = response.json();
+        }, error => {
+          alert('An unexpected error occured');
+          console.log(error);
         });
   }
 
