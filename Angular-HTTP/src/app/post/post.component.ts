@@ -23,13 +23,17 @@ export class PostComponent implements OnInit{
     const post: any = {
       title: input.value
     };
+    // optimistic update (no waiting for server)
+    this.posts.splice(0, 0 , post);
+
     input.value = '';
 
     this.postService.create(post)
       .subscribe(newPost => {
         post['id'] = newPost.id;
-        this.posts.splice(0, 0 , post);
       }, (error: AppError) => {
+        this.posts.splice(0, 1);
+
         if (error instanceof BadInput) {
            // this.form.setError(error.originalError);
         } else {
@@ -46,11 +50,14 @@ export class PostComponent implements OnInit{
   }
 
   deletePost(post) {
+    const index = this.posts.indexOf(post);
+    this.posts.splice(index, 1);
+
     this.postService.delete(post.id)
-      .subscribe(() => {
-        const index = this.posts.indexOf(post);
-        this.posts.splice(index, 1);
-      }, (error: AppError) => {
+      .subscribe(null,
+        (error: AppError) => {
+        this.posts.splice(index, 0, post);
+
         if (error instanceof NotFoundError) {
           alert('This post has already being deleted');
         } else {
