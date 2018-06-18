@@ -3,6 +3,9 @@ import {GithubService} from '../services/github.service';
 import {ActivatedRoute} from '@angular/router';
 
 import 'rxjs/add/observable/combineLatest';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/switchMap';
+
 import {Observable} from 'rxjs';
 
 @Component({
@@ -21,14 +24,13 @@ export class GithubFollowerComponent implements OnInit {
       this.route.paramMap,
       this.route.queryParamMap
     ])
-      .subscribe(combine => {
-        const id = combine[0].get('id');
-        const page =  combine[1].get('page');
+      .switchMap(combined => {
+        const id = combined[0].get('id');
+        const page =  combined[1].get('page');
 
-        // this.service.getAll({id: id, page: page});
-        this.service.getAll()
-          .subscribe(followers => this.followers = followers);
-      });
+        return this.service.getAll();
+      })
+      .subscribe(followers => this.followers = followers);
 
 
   }
