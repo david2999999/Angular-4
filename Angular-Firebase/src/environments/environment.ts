@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyBkgEpsAb17hBIDcj9jRq18zlMF7L9e2AY',
-    authDomain: 'angular-udemy-course.firebaseapp.com',
-    databaseURL: 'https://angular-udemy-course.firebaseio.com',
-    projectId: 'angular-udemy-course',
-    storageBucket: 'angular-udemy-course.appspot.com',
-    messagingSenderId: '839937293902'
+    apiKey: "AIzaSyD9L4GD0CHnOjPmKu-1u8mXO7KeD_5mRtE",
+    authDomain: "courses-c4030.firebaseapp.com",
+    databaseURL: "https://courses-c4030.firebaseio.com",
+    projectId: "courses-c4030",
+    storageBucket: "courses-c4030.appspot.com",
+    messagingSenderId: "80828153161"
   }
 };
 
