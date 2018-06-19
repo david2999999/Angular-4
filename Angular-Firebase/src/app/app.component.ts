@@ -44,4 +44,8 @@ export class AppComponent {
         isLive: true
       });
   }
+
+  delete(course, index: number) {
+    this.db.object('/course/' + (index + 1)).remove();
+  }
 }
