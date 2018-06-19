@@ -16,7 +16,7 @@ export class AppComponent {
   // courses: any[];
   // subscription: Subscription;
 
-  constructor(db: AngularFireDatabase) {
+  constructor(private db: AngularFireDatabase) {
     this.courseList = db.list('/course');
     this.courses$ =  db.list('/course').valueChanges();
     this.course$ =  db.object('/course/1').valueChanges();
@@ -31,15 +31,17 @@ export class AppComponent {
 
   add(course: HTMLInputElement) {
     this.courseList.push(course.value);
-    this.courseList.push({
-      name: course.value,
-      price: 200,
-      isLive: true,
-      sections: [
-        { title: 'Components'}
-      ]
-    });
-
     course.value = '';
+  }
+
+  update(course, index: number) {
+    this.db.object('/course/' + (index + 1))
+      .set('Updated');
+
+    this.db.object('/course/' + (index + 1))
+      .update({
+        title: 'New Title',
+        isLive: true
+      });
   }
 }
