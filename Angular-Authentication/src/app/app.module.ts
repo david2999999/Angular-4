@@ -6,7 +6,7 @@ import { AuthService } from './services/auth.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule, Http, BaseRequestOptions } from '@angular/http';
+import {HttpModule, Http, BaseRequestOptions, RequestOptions} from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -45,7 +45,11 @@ import {AdminAuthGuard} from './services/admin-auth-guard.service';
     AuthGuard,
     AdminAuthGuard,
     AuthService,
-
+    {
+      provide: AuthHttp,
+      useFactory: authHttpServiceFactory,
+      deps: [Http, RequestOptions]
+    },
     // For creating a mock back-end. You don't need these in a real app.
     fakeBackendProvider,
     MockBackend,
@@ -54,3 +58,13 @@ import {AdminAuthGuard} from './services/admin-auth-guard.service';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function authHttpServiceFactory(http: Http, options: RequestOptions) {
+  return new AuthHttp(
+    new AuthConfig({
+      tokenGetter: () => localStorage.getItem('token')
+    }),
+    http,
+    options
+  );
+}
