@@ -5,7 +5,7 @@ export function fakeBackendFactory(
     backend: MockBackend,
     options: BaseRequestOptions) {
 
-  const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkRhdmlkIEouIiwiaWF0IjoxNTE2MjM5MDIyLCJhZG1pbiI6dHJ1ZX0.l-fPUf43uz4I82CH4c9pLXeQDrUx2BB_RD5y0R-CvcM';
+  const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkRhdmlkIEouIiwiaWF0IjoxNTE2MjM5MDIyLCJhZG1pbiI6ZmFsc2V9.WvmsFMFohwCAZHfYLGEsSyB0K-8PfScq4hy7QPSADFY';
 
   backend.connections.subscribe((connection: MockConnection) => {
     // We are using the setTimeout() function to simulate an
