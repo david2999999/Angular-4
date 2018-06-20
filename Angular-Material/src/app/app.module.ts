@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCheckboxModule, MatInputModule, MatNativeDateModule, MatSelectModule} from '@angular/material';
+import {MatCheckboxModule, MatIconModule, MatInputModule, MatNativeDateModule, MatSelectModule} from '@angular/material';
 import { MatRadioModule } from '@angular/material/radio';
 import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { CheckBoxComponent } from './check-box/check-box.component';
@@ -14,6 +14,7 @@ import { InputsComponent } from './inputs/inputs.component';
 import { TextAreaComponent } from './text-area/text-area.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import {DatePickerComponent} from './date-picker/date-picker.component';
+import { IconsComponent } from './icons/icons.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {DatePickerComponent} from './date-picker/date-picker.component';
     SelectComponent,
     InputsComponent,
     TextAreaComponent,
-    DatePickerComponent
+    DatePickerComponent,
+    IconsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import {DatePickerComponent} from './date-picker/date-picker.component';
     MatSelectModule,
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
