@@ -4,7 +4,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatIconModule, MatInputModule, MatNativeDateModule, MatSelectModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatIconModule,
+  MatInputModule,
+  MatNativeDateModule,
+  MatSelectModule
+} from '@angular/material';
 import { MatRadioModule } from '@angular/material/radio';
 import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { CheckBoxComponent } from './check-box/check-box.component';
@@ -16,6 +24,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import {DatePickerComponent} from './date-picker/date-picker.component';
 import { IconsComponent } from './icons/icons.component';
 import {ButtonComponent} from './button/button.component';
+import { ChipsComponent } from './chips/chips.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +36,8 @@ import {ButtonComponent} from './button/button.component';
     TextAreaComponent,
     DatePickerComponent,
     IconsComponent,
-    ButtonComponent
+    ButtonComponent,
+    ChipsComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +50,8 @@ import {ButtonComponent} from './button/button.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
