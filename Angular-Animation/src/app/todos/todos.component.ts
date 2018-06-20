@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {bounceOutLeftAnimation, fade, fadeInAnimation, slide} from '../animations';
-import {animate, animateChild, group, query, style, transition, trigger, useAnimation} from '@angular/animations';
+import {animate, animateChild, group, query, stagger, style, transition, trigger, useAnimation} from '@angular/animations';
 
 @Component({
   selector: 'todos',
@@ -14,7 +14,9 @@ import {animate, animateChild, group, query, style, transition, trigger, useAnim
             style({ transform: 'translateY(-20px)' }),
             animate(1000)
           ], {optional: true}),
-          query('@todoAnimation', [animateChild()], {optional: true})
+          // query('@todoAnimation', stagger(100, animateChild()), {optional: true})
+          // query('@todoAnimation', stagger(100, useAnimation(fadeInAnimation)), {optional: true})
+          query('.list-group-item', stagger(100, animateChild()), {optional: true})
         ])
 
       ])
