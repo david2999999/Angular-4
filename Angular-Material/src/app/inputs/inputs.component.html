@@ -1,0 +1,16 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput ngModel name="food" #food="ngModel"
+           placeholder="Favorite food" required>
+    <mat-hint>Enter your favorite food</mat-hint>
+    <span matSuffix>Food</span>
+    <span matPrefix></span>
+    <mat-error *ngIf="food.invalid && food['errors'].required">
+      The username is required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Leave a comment"></textarea>
+  </mat-form-field>
+</form>
