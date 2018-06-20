@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCheckboxModule, MatInputModule, MatSelectModule} from '@angular/material';
+import {MatCheckboxModule, MatInputModule, MatNativeDateModule, MatSelectModule} from '@angular/material';
 import { MatRadioModule } from '@angular/material/radio';
 import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { CheckBoxComponent } from './check-box/check-box.component';
@@ -12,6 +12,8 @@ import { SelectComponent } from './select/select.component';
 import {FormsModule} from '@angular/forms';
 import { InputsComponent } from './inputs/inputs.component';
 import { TextAreaComponent } from './text-area/text-area.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import {DatePickerComponent} from './date-picker/date-picker.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { TextAreaComponent } from './text-area/text-area.component';
     CheckBoxComponent,
     SelectComponent,
     InputsComponent,
-    TextAreaComponent
+    TextAreaComponent,
+    DatePickerComponent
   ],
   imports: [
     BrowserModule,
@@ -29,8 +32,9 @@ import { TextAreaComponent } from './text-area/text-area.component';
     MatCheckboxModule,
     MatRadioModule,
     MatSelectModule,
-    MatInputModule
-
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
