@@ -7,9 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  isChecked = true;
 
-  onChange($event) {
-    console.log($event);
-  }
 }
