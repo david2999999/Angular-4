@@ -12,7 +12,11 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
         style({
           backgroundColor: '#ecf0f1', opacity: 0, padding: 0, height: 0
         }),
-        animate(200)
+        animate(300)
+      ]),
+
+      transition('* => void', [
+        animate(300, style({opacity: 0}))
       ])
     ])
   ]
