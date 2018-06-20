@@ -11,6 +11,7 @@ import { CheckBoxComponent } from './check-box/check-box.component';
 import { SelectComponent } from './select/select.component';
 import {FormsModule} from '@angular/forms';
 import { InputsComponent } from './inputs/inputs.component';
+import { TextAreaComponent } from './text-area/text-area.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { InputsComponent } from './inputs/inputs.component';
     RadioButtonComponent,
     CheckBoxComponent,
     SelectComponent,
-    InputsComponent
+    InputsComponent,
+    TextAreaComponent
   ],
   imports: [
     BrowserModule,
