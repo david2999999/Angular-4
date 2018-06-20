@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 import {bounceOutLeftAnimation, fade, fadeInAnimation, slide} from '../animations';
-import {animate, query, style, transition, trigger, useAnimation} from '@angular/animations';
+import {animate, animateChild, query, style, transition, trigger, useAnimation} from '@angular/animations';
 
 @Component({
   selector: 'todos',
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.css'],
   animations: [
-    trigger('todoAnimation', [
+    trigger('todosAnimation', [
       transition(':enter', [
         query('h1', [
           style({ transform: 'translateY(-20px)' }),
           animate(1000)
-        ], {optional: true})
+        ], {optional: true}),
+        query('@todoAnimation', [animateChild()], {optional: true})
       ])
     ]),
 
