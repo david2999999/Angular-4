@@ -18,9 +18,6 @@ export class ChipsComponent implements OnInit {
 
   select(category) {
     this.categories.filter(c => c.selected !== !c.selected).forEach(c => c['selected'] = false);
-
     category['selected'] = !category['selected'];
-
-    )
   }
 }

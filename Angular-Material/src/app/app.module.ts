@@ -10,7 +10,7 @@ import {
   MatChipsModule,
   MatIconModule,
   MatInputModule,
-  MatNativeDateModule,
+  MatNativeDateModule, MatProgressSpinnerModule,
   MatSelectModule
 } from '@angular/material';
 import { MatRadioModule } from '@angular/material/radio';
@@ -25,6 +25,7 @@ import {DatePickerComponent} from './date-picker/date-picker.component';
 import { IconsComponent } from './icons/icons.component';
 import {ButtonComponent} from './button/button.component';
 import { ChipsComponent } from './chips/chips.component';
+import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ChipsComponent } from './chips/chips.component';
     DatePickerComponent,
     IconsComponent,
     ButtonComponent,
-    ChipsComponent
+    ChipsComponent,
+    ProgressSpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,8 @@ import { ChipsComponent } from './chips/chips.component';
     MatNativeDateModule,
     MatIconModule,
     MatButtonModule,
-    MatChipsModule
+    MatChipsModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
