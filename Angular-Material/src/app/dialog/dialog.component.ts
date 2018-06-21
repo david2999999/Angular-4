@@ -15,7 +15,11 @@ export class DialogComponent implements OnInit {
   }
 
   openDialog() {
-    this.dialog.open(EditCourseComponent)
+    this.dialog.open(EditCourseComponent, {
+      data: {
+        courseId: 1
+      }
+    })
       .afterClosed()
       .subscribe(result => console.log(result));
   }

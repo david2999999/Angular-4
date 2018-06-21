@@ -29,7 +29,7 @@ import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.co
 import { ToolTipComponent } from './tool-tip/tool-tip.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { DialogComponent } from './dialog/dialog.component';
-import { EditCourseComponent } from './dialog/edit-course/edit-course.component';
+import {DIALOG_DATA, EditCourseComponent} from './dialog/edit-course/edit-course.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +70,9 @@ import { EditCourseComponent } from './dialog/edit-course/edit-course.component'
     MatTabsModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [
+    { provide: DIALOG_DATA, useValue: {} }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
