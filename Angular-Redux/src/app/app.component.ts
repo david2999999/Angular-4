@@ -14,9 +14,10 @@ export class AppComponent {
   // @select('counter') count;
   // @select(['messaging', 'newMessages']) newMessages;
   // @select((s: IAppState) => s.messaging.newMessages) newMessages;
+  // newMessages;
 
   counter;
-  newMessages;
+
   constructor(private ngRedux: NgRedux<IAppState>) {
     ngRedux.subscribe(() => {
       const store = ngRedux.getState();
