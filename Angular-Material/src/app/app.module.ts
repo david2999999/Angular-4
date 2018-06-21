@@ -7,7 +7,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
   MatCheckboxModule,
-  MatChipsModule,
+  MatChipsModule, MatDialogModule,
   MatIconModule,
   MatInputModule,
   MatNativeDateModule, MatProgressSpinnerModule,
@@ -28,6 +28,8 @@ import { ChipsComponent } from './chips/chips.component';
 import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
 import { ToolTipComponent } from './tool-tip/tool-tip.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { DialogComponent } from './dialog/dialog.component';
+import { EditCourseComponent } from './dialog/edit-course/edit-course.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,12 @@ import { TabsComponent } from './tabs/tabs.component';
     ChipsComponent,
     ProgressSpinnerComponent,
     ToolTipComponent,
-    TabsComponent
+    TabsComponent,
+    DialogComponent,
+    EditCourseComponent
+  ],
+  entryComponents: [
+    EditCourseComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +67,8 @@ import { TabsComponent } from './tabs/tabs.component';
     MatChipsModule,
     MatProgressSpinnerModule,
     MatTooltipModule,
-    MatTabsModule
+    MatTabsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
