@@ -8,7 +8,7 @@ describe('VoteComponent', () => {    // Arrange
   });
 
   // afterEach(() => {
-  // 
+  //
   // })
 
   it('should increment totalVotes when upvoted', () => {
