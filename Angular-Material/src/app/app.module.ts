@@ -11,7 +11,7 @@ import {
   MatIconModule,
   MatInputModule,
   MatNativeDateModule, MatProgressSpinnerModule,
-  MatSelectModule
+  MatSelectModule, MatTooltipModule
 } from '@angular/material';
 import { MatRadioModule } from '@angular/material/radio';
 import { RadioButtonComponent } from './radio-button/radio-button.component';
@@ -26,6 +26,7 @@ import { IconsComponent } from './icons/icons.component';
 import {ButtonComponent} from './button/button.component';
 import { ChipsComponent } from './chips/chips.component';
 import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
+import { ToolTipComponent } from './tool-tip/tool-tip.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.co
     IconsComponent,
     ButtonComponent,
     ChipsComponent,
-    ProgressSpinnerComponent
+    ProgressSpinnerComponent,
+    ToolTipComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,8 @@ import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.co
     MatIconModule,
     MatButtonModule,
     MatChipsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
