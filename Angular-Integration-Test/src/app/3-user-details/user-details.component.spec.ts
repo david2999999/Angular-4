@@ -6,14 +6,22 @@ import 'rxjs/add/observable/empty';
 
 import { UserDetailsComponent } from './user-details.component';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Observable} from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 
 class RouterStub {
   navigate(params) {}
 }
 
 class ActivatedRouteStub {
-  params: Observable<any> = Observable.empty();
+  private subject = new Subject();
+
+  push(value) {
+    this.subject.next(value);
+  }
+
+  get params() {
+    return this.subject.asObservable();
+  }
 }
 
 describe('UserDetailsComponent', () => {
@@ -44,5 +52,15 @@ describe('UserDetailsComponent', () => {
     component.save();
 
     expect(spy).toHaveBeenCalledWith(['users']);
+  });
+
+  it('should redirect the user to the not found page when an invalid userId is passed', () => {
+    const router = TestBed.get(Router);
+    const spy = spyOn(router, 'navigate');
+
+    const route: ActivatedRouteStub = TestBed.get(ActivatedRoute);
+    route.push( { id: 0} );
+
+    expect(spy).toHaveBeenCalledWith(['not-found']);
   });
 });
