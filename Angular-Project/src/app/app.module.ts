@@ -18,14 +18,14 @@ import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.componen
 import {RouterModule} from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {AuthService} from './auth.service';
+import {AuthService} from './services/auth.service';
 import {AuthGuard} from './auth-guard.service';
-import {UserService} from './user.service';
+import {UserService} from './services/user.service';
 import {AdminAuthGuard} from './admin-auth-guard.service';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
-import {CategoryService} from './category.service';
+import {CategoryService} from './services/category.service';
 import {FormsModule} from '@angular/forms';
-import {ProductService} from './product.service';
+import {ProductService} from './services/product.service';
 import {CustomFormsModule} from 'ng2-validation';
 
 @NgModule({
@@ -62,8 +62,9 @@ import {CustomFormsModule} from 'ng2-validation';
       { path: 'order-success', component: OrderSuccessComponent, canActivate: [AuthGuard] },
       { path: 'my/orders', component: MyOrdersComponent, canActivate: [AuthGuard]},
 
-      { path: 'admin/products', component: AdminProductsComponent, canActivate: [AuthGuard, AdminAuthGuard]},
       { path: 'admin/products/new', component: ProductFormComponent, canActivate: [AuthGuard, AdminAuthGuard]},
+      { path: 'admin/products/:id', component: ProductFormComponent, canActivate: [AuthGuard, AdminAuthGuard]},
+      { path: 'admin/products', component: AdminProductsComponent, canActivate: [AuthGuard, AdminAuthGuard]},
       { path: 'admin/orders', component: AdminOrdersComponent, canActivate: [AuthGuard, AdminAuthGuard]},
     ])
   ],
