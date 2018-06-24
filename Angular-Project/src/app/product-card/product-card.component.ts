@@ -7,6 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ProductCardComponent implements OnInit {
   @Input('product') product;
+  @Input('show-actions') showActions = true;
 
   constructor() { }
 
