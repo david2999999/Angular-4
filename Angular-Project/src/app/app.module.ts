@@ -27,6 +27,7 @@ import {CategoryService} from './services/category.service';
 import {FormsModule} from '@angular/forms';
 import {ProductService} from './services/product.service';
 import {CustomFormsModule} from 'ng2-validation';
+import {DataTableModule} from 'angular5-data-table';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import {CustomFormsModule} from 'ng2-validation';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    DataTableModule,
     NgbModule.forRoot(),
     RouterModule.forRoot([
       { path: '', redirectTo: 'home', pathMatch: 'full'},
