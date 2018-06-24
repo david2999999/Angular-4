@@ -13,11 +13,10 @@ import 'rxjs/operator/switchMap';
 export class ProductsComponent implements OnInit {
   products: Product[] = [];
   filteredProducts: Product[] = [];
-  categories$;
+
   category: string;
 
   constructor(private productService: ProductService,
-              private categoryService: CategoryService,
               private route: ActivatedRoute) {
 
     productService
@@ -32,8 +31,6 @@ export class ProductsComponent implements OnInit {
             this.products.filter(p => p.category === this.category) :
             this.products;
         });
-
-    this.categories$ = this.categoryService.getAll();
   }
 
   ngOnInit() {
