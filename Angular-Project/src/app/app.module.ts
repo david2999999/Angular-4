@@ -55,7 +55,7 @@ import {DataTableModule} from 'angular5-data-table';
     NgbModule.forRoot(),
     RouterModule.forRoot([
       { path: '', redirectTo: 'home', pathMatch: 'full'},
-      { path: 'home', component: HomeComponent},
+      { path: 'home', component: ProductsComponent},
       { path: 'products', component: ProductsComponent},
       { path: 'shopping-cart', component: ShoppingCartComponent },
       { path: 'login', component: LoginComponent},
