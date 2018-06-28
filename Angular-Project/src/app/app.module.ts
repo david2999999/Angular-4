@@ -18,23 +18,16 @@ import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.componen
 import {RouterModule} from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {AuthService} from './shared/services/auth.service';
 import {AuthGuard} from './shared/services/auth-guard.service';
-import {UserService} from './shared/services/user.service';
 import {AdminAuthGuard} from './shared/services/admin-auth-guard.service';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
-import {CategoryService} from './shared/services/category.service';
 import {FormsModule} from '@angular/forms';
-import {ProductService} from './shared/services/product.service';
 import {CustomFormsModule} from 'ng2-validation';
 import {DataTableModule} from 'angular5-data-table';
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
-import { ProductCardComponent } from './shared/components/product-card/product-card.component';
-import {ShoppingCartService} from './shared/services/shopping-cart.service';
-import { ProductQuantityComponent } from './shared/components/product-quantity/product-quantity.component';
-import {OrderService} from './shared/services/order.service';
 import { ShoppingCartSummaryComponent } from './shopping-cart-summary/shopping-cart-summary.component';
 import { ShippingFormComponent } from './shipping-form/shipping-form.component';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -51,13 +44,12 @@ import { ShippingFormComponent } from './shipping-form/shipping-form.component';
     LoginComponent,
     ProductFormComponent,
     ProductFilterComponent,
-    ProductCardComponent,
-    ProductQuantityComponent,
     ShoppingCartSummaryComponent,
     ShippingFormComponent
   ],
   imports: [
     BrowserModule,
+    SharedModule,
     FormsModule,
     CustomFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -83,14 +75,7 @@ import { ShippingFormComponent } from './shipping-form/shipping-form.component';
     ])
   ],
   providers: [
-    AuthService,
-    AuthGuard,
-    UserService,
-    AdminAuthGuard,
-    CategoryService,
-    ProductService,
-    ShoppingCartService,
-    OrderService
+    AdminAuthGuard
   ],
   bootstrap: [AppComponent]
 })
