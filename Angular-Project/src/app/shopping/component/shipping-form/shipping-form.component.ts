@@ -1,10 +1,10 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
-import {Order} from '../shared/models/order';
+import {Order} from '../../../shared/models/order';
 import {Subscription} from 'rxjs';
 import {Router} from '@angular/router';
-import {OrderService} from '../shared/services/order.service';
-import {AuthService} from '../shared/services/auth.service';
-import {ShoppingCart} from '../shared/models/shopping-cart';
+import {OrderService} from '../../../shared/services/order.service';
+import {AuthService} from '../../../shared/services/auth.service';
+import {ShoppingCart} from '../../../shared/models/shopping-cart';
 
 @Component({
   selector: 'app-shipping-form',
