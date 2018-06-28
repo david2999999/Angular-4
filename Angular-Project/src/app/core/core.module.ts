@@ -4,10 +4,11 @@ import {HomeComponent} from './home/home.component';
 import {BsNavbarComponent} from './bs-navbar/bs-navbar.component';
 import {LoginComponent} from './login/login.component';
 import {RouterModule} from '@angular/router';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   imports: [
-    CommonModule,
+    SharedModule,
     RouterModule.forChild([])
   ],
   declarations: [
